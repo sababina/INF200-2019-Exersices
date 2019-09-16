@@ -4,6 +4,7 @@
 Solution to task B on exercise 01 in INF200
 """
 
+
 def squares_by_comp(n):
     return [k**2 for k in range(n) if k % 3 == 1]
 
@@ -18,7 +19,10 @@ def squares_by_loop(n):
 
 if __name__ == '__main__':
 
-    how_many_squares: int = 10
+    how_many_squares = input('How many squares do you want?')
+    how_many_squares = int(how_many_squares)
 
     if squares_by_comp(how_many_squares) != squares_by_loop(how_many_squares):
         print('ERROR!')
+    else:
+        print(squares_by_comp(how_many_squares), squares_by_loop(how_many_squares))
