@@ -6,8 +6,16 @@ Solution to task D exercise 01 in INF200
 
 from random import randint
 
-__author__ = 'sabina langas'
+__author__ = 'Sabina Langås'
 __email__ = 'sabinal@nmbu.no'
+
+""" 
+    This is a game were you try to guss a number of the roll of two dices.
+    You get 3 attempts at guessing, and you earn points as following:
+    -First attempt right 3 points
+    -Second attempt right 2 points
+    -Third attempt right 1 point
+"""
 
 
 def get_valid_input():
@@ -17,7 +25,7 @@ def get_valid_input():
     """
     guess = 0
     while guess < 1:
-        guess = int(input('Your guess: '))
+        guess = int(input('Your guess between 2 and 12: '))
     return guess
 
 
