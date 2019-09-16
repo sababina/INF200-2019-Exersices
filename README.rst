@@ -1,7 +1,7 @@
 INF200 Exersices:
 =================
 
-sabina langas:
+Sabina Langås:
 -------------------
 
 This repository contains all the exersices written as part of the
