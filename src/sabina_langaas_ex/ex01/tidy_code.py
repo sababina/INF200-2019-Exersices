@@ -6,12 +6,13 @@ Solution to task D exercise 01 in INF200
 
 from random import randint
 
-__author__ = 'Sabina Langås'
+__author__ = 'sabina langas'
 __email__ = 'sabinal@nmbu.no'
 
 
 def get_valid_input():
     """  Get a integer input > 0 from user
+
     :return: int -- input
     """
     guess = 0
@@ -22,8 +23,10 @@ def get_valid_input():
 
 def roll_dice(die_low, die_high) -> int:
     """ Return the sum of two dice rolls.
+
     :param die_low: lowest number on dice
     :param die_high: highest number on dice
+
     :return: gives the sum of to dice rolls
     """
     return randint(die_low, die_high) + randint(die_low, die_high)
@@ -31,8 +34,10 @@ def roll_dice(die_low, die_high) -> int:
 
 def correct_guess(correct: int, guess: int) -> bool:
     """ Returns true if the answer is right, returns false otherwise
+
     :param correct: correct answer
     :param guess: user guess
+
     :return bool: correct answer or not
     """
     return correct == guess
