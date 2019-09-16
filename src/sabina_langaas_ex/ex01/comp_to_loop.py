@@ -19,9 +19,9 @@ def squares_by_loop(n):
 
 if __name__ == '__main__':
 
-    how_many_squares = int(input('How many squares do you want?'))
+    number = int(input('Enter a number'))
 
-    if squares_by_comp(how_many_squares) != squares_by_loop(how_many_squares):
+    if squares_by_comp(number) != squares_by_loop(number):
         print('ERROR!')
     else:
         print('Success')
