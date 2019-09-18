@@ -9,19 +9,19 @@ from random import randint
 __author__ = 'Sabina Langås'
 __email__ = 'sabinal@nmbu.no'
 
-""" 
-    This is a game were you try to guss a number of the roll of two dices.
-    You get 3 attempts at guessing, and you earn points as following:
-    -First attempt right 3 points
-    -Second attempt right 2 points
-    -Third attempt right 1 point
+"""This is a game were you try to guss a number of the roll of two dices.
+You get 3 attempts at guessing, and you earn points as following:
+-First attempt right 3 points
+-Second attempt right 2 points
+-Third attempt right 1 point
 """
 
 
 def get_valid_input():
     """  Get a integer input > 0 from user
 
-    :return: int -- input
+    Returns:
+        int -- input
     """
     guess = 0
     while guess < 1:
@@ -32,10 +32,12 @@ def get_valid_input():
 def roll_dice(die_low, die_high) -> int:
     """ Return the sum of two dice rolls.
 
-    :param die_low: lowest number on dice
-    :param die_high: highest number on dice
+    Arguments:
+        die_low {int}: lowest number on dice
+        die_high {int}: highest number on dice
 
-    :return: gives the sum of to dice rolls
+    Returns:
+         Gives the sum of to dice rolls
     """
     return randint(die_low, die_high) + randint(die_low, die_high)
 
@@ -43,10 +45,12 @@ def roll_dice(die_low, die_high) -> int:
 def correct_guess(correct: int, guess: int) -> bool:
     """ Returns true if the answer is right, returns false otherwise
 
-    :param correct: correct answer
-    :param guess: user guess
+    Arguments:
+        correct {int}: correct answer
+        guess {int}: user guess
 
-    :return bool: correct answer or not
+    Returns:
+        {bool}: correct answer or not
     """
     return correct == guess
 
