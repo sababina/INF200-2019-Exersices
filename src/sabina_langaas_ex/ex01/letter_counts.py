@@ -6,8 +6,7 @@ Solution to task C on exercise 01 in INF200
 
 
 def letter_freq(txt):
-    """
-    This code counts the frequency of the letters in the string that´s entered by the user of the code
+    """This code counts the frequency of the letters in the string that´s entered by the user of the code
 
     Arguments:
         tx {str}: input for the user of the code, a string
@@ -31,6 +30,5 @@ if __name__ == '__main__':
 
     frequencies = letter_freq(text)
     frequencies_sorted = dict(sorted(frequencies.items()))
-
     for letter, count in frequencies_sorted.items():
         print('{:3}{:10}'.format(letter, count))
