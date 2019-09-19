@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-Solution to task D exercise 01 in INF200
-"""
 
 from random import randint
 
@@ -23,9 +20,12 @@ def get_valid_input():
     Returns:
         int -- input
     """
-    guess = 0
-    while guess < 1:
-        guess = int(input('Your guess between 2 and 12: '))
+    valid_input = False
+    
+    while not valid_input:
+        guess = int(input('Your guess: '))
+        if guess >= 1:
+            valid_input = True
     return guess
 
 
