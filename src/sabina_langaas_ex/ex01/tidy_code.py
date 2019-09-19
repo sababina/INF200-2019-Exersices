@@ -20,12 +20,10 @@ def get_valid_input():
     Returns:
         int -- input
     """
-    valid_input = False
-    
-    while not valid_input:
+    guess = 0
+
+    while guess < 1:
         guess = int(input('Your guess: '))
-        if guess >= 1:
-            valid_input = True
     return guess
 
 

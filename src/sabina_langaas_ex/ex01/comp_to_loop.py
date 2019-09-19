@@ -14,14 +14,14 @@ def squares_by_loop(n):
     Returns:
         list -- list including the squares
     """    
-    square_list= []
+    square_list = []
     
     for k in range(n):
         if k % 3 == 1:
-            squares.append(k**2)
-    return squares
+            square_list.append(k**2)
+    return square_list
 
 
 if __name__ == '__main__':
-    if squares_by_comp(number) != squares_by_loop(number):
+    if squares_by_comp(100) != squares_by_loop(100):
         print('ERROR!')
