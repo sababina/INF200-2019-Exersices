@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-Solution to task C on exercise 01 in INF200
-"""
-
 
 def letter_freq(txt):
     """This code counts the frequency of the letters in the string that´s entered by the user of the code
