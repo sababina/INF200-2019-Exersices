@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-"""
-Solution to task A on exercise 01 in INF200
-"""
 
 SUITS = ('C', 'S', 'H', 'D')
 VALUES = range(1, 14)
@@ -17,6 +14,11 @@ def deck_loop():
 
 
 def deck_comp():
+    """Creates a deck of cards and returns it
+    
+    Returns:
+        list -- List of tuples of the form (suit: str, val: int)
+    """    
     return [(suit, val) for suit in SUITS for val in VALUES]
 
 
