@@ -6,7 +6,8 @@ def squares_by_comp(n):
 
 
 def squares_by_loop(n):
-    """Returns a list containing the squares of all factors of 3 up to n
+    """
+    Returns a list containing the squares of all factors of 3 up to n
     
     Arguments:
         n {int} -- Integer which the for loop will count up to

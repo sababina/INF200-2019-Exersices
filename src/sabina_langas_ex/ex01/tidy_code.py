@@ -6,7 +6,8 @@ from random import randint
 __author__ = 'Sabina Langås'
 __email__ = 'sabinal@nmbu.no'
 
-"""This is a game were you try to guss a number of the roll of two dices.
+"""
+This is a game were you try to guss a number of the roll of two dices.
 You get 3 attempts at guessing, and you earn points as following:
 -First attempt right 3 points
 -Second attempt right 2 points
@@ -15,7 +16,8 @@ You get 3 attempts at guessing, and you earn points as following:
 
 
 def get_valid_input():
-    """  Get a integer input > 0 from user
+    """
+    Get a integer input > 0 from user
 
     Returns:
         int -- input
@@ -28,7 +30,8 @@ def get_valid_input():
 
 
 def roll_dice(die_low, die_high) -> int:
-    """ Return the sum of two dice rolls.
+    """
+    Return the sum of two dice rolls.
 
     Arguments:
         die_low {int}: lowest number on dice
@@ -41,7 +44,8 @@ def roll_dice(die_low, die_high) -> int:
 
 
 def correct_guess(correct: int, guess: int) -> bool:
-    """ Returns true if the answer is right, returns false otherwise
+    """
+    Returns true if the answer is right, returns false otherwise
 
     Arguments:
         correct {int}: correct answer

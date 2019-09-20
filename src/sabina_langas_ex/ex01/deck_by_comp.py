@@ -14,7 +14,8 @@ def deck_loop():
 
 
 def deck_comp():
-    """Creates a deck of cards and returns it
+    """
+    Creates a deck of cards and returns it
     
     Returns:
         list -- List of tuples of the form (suit: str, val: int)

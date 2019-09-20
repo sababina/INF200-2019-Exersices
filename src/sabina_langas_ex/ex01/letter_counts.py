@@ -2,7 +2,8 @@
 
 
 def letter_freq(txt):
-    """This code counts the frequency of the letters in the string that´s entered by the user of the code
+    """
+    This code counts the frequency of the letters in the string that´s entered by the user of the code
 
     Arguments:
         tx {str}: input for the user of the code, a string
