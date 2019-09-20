@@ -24,8 +24,8 @@ def letter_freq(txt):
 
 if __name__ == '__main__':
     text = input('Please enter text to analyse: ')
-
     frequencies = letter_freq(text)
     frequencies_sorted = dict(sorted(frequencies.items()))
+
     for letter, count in frequencies_sorted.items():
         print('{:3}{:10}'.format(letter, count))
