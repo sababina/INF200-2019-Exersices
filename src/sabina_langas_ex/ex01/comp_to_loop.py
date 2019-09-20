@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+__author__ = 'Sabina Langås'
+__email__ = 'sabinal@nmbu.no'
+
 
 def squares_by_comp(n):
     return [k**2 for k in range(n) if k % 3 == 1]
