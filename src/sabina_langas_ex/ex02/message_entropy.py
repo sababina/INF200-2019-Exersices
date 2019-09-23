@@ -1,4 +1,9 @@
+# -*- coding: utf-8 -*-
+
 import numpy as np
+
+__author__ = 'Sabina Langås'
+__email__ = 'sabinal@nmbu.no'
 
 
 def letter_freq(txt):
