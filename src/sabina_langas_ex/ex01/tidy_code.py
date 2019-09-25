@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 from random import randint
 
 __author__ = 'Sabina Langås'
