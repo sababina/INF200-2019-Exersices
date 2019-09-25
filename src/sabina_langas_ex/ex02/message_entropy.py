@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import numpy as np
+from math import log2
 
 __author__ = 'Sabina Langås'
 __email__ = 'sabinal@nmbu.no'
@@ -9,10 +9,10 @@ __email__ = 'sabinal@nmbu.no'
 def letter_freq(txt):
     """
     This code counts the frequency of the letters in the string that´s entered by the user of the code
-    Arguments:
-        tx {str}: input for the user of the code, a string
-    Returns:
-         returns a dictionary where key is the characters in txt and the value is the number of occurrences in txt
+
+    :param txt: input for the user of the code, a string
+
+    :return: returns a dictionary where key is the characters in txt and the value is the number of occurrences in txt
     """
     freq = {}
     txt_lower = txt.lower()
@@ -26,13 +26,20 @@ def letter_freq(txt):
 
 
 def entropy(message):
+    """
+    Returns the calculated entropy (according to information theory) of the input message
+
+    :param message: A message that the user want to find the entropy of
+
+    :return: Returns the entropy value for message
+    """
 
     message = letter_freq(message)
     h = 0
     for n_i in message.values():
         p_i = n_i/sum(message.values())
-        h += -p_i*(np.log(p_i))
-    return h/np.log(2)
+        h += -p_i*(log2(p_i))
+    return h
 
 
 if __name__ == "__main__":
