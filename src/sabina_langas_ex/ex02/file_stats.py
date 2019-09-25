@@ -10,13 +10,9 @@ def char_counts(textfilename):
     Counts how often each character code occurs int the string and
     return the result as a list or tuple.
 
-    :param textfilename:
+    :param textfilename: The textfile you want to analyse
 
-    The textfile you want to analyse
-
-    :return:
-
-    Returns a list or tuple of counted character code
+    :return: Returns a list or tuple of counted character code
     """
     open_file = open(textfilename, encoding='utf-8')
     content_of_file = open_file.read()

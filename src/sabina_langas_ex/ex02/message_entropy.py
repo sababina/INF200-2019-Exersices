@@ -8,11 +8,13 @@ __email__ = 'sabinal@nmbu.no'
 
 def letter_freq(txt):
     """
-    This code counts the frequency of the letters in the string that´s entered by the user of the code
+    This code counts the frequency of the letters in the string that´s entered
+    by the user of the code
 
     :param txt: input for the user of the code, a string
 
-    :return: returns a dictionary where key is the characters in txt and the value is the number of occurrences in txt
+    :return: returns a dictionary where key is the characters in txt and the
+             value is the number of occurrences in txt
     """
     freq = {}
     txt_lower = txt.lower()
@@ -27,7 +29,8 @@ def letter_freq(txt):
 
 def entropy(message):
     """
-    Returns the calculated entropy (according to information theory) of the input message
+    Returns the calculated entropy (according to information theory)
+    of the input message
 
     :param message: A message that the user want to find the entropy of
 

@@ -5,13 +5,20 @@ __email__ = 'sabinal@nmbu.no'
 
 
 def bubble_sort(data):
-    new_sorted_list = list(data)
+    """
+    Sorts the data after teh bubble_sort algorithm
 
-    for i in range(1, len(new_sorted_list)):
-        for j in range(0, (len(new_sorted_list)-i)):
-            if new_sorted_list[j] > new_sorted_list[j+1]:
-                new_sorted_list[j], new_sorted_list[j + 1] = new_sorted_list[j+1], new_sorted_list[j]
-    return new_sorted_list
+    :param data: The data that going to be sort
+
+    :return: Returns the input sorted in a new list
+    """
+    sort_data = list(data)
+
+    for i in range(1, len(sort_data)):
+        for j in range(0, (len(sort_data) - i)):
+            if sort_data[j] > sort_data[j + 1]:
+                sort_data[j], sort_data[j + 1] = sort_data[j + 1], sort_data[j]
+    return sort_data
 
 
 if __name__ == "__main__":
