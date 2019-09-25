@@ -26,15 +26,16 @@ def letter_freq(txt):
 
 
 def entropy(message):
-    dist = letter_freq(message)
-    su = 0
-    for p in dist.values():
-        r = p/sum(dist.values())
-        if r == 0:
-            su += 0
+
+    message = letter_freq(message)
+    h = 0
+    for n_i in message.values():
+        p_i = n_i/sum(message.values())
+        if p_i == 0:
+            h += 0
         else:
-            su += -r*(np.log(r))
-    return su/np.log(2)
+            h += -p_i*(np.log(p_i))
+    return h/np.log(2)
 
 
 if __name__ == "__main__":
