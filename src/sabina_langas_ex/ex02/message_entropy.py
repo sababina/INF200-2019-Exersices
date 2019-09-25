@@ -31,10 +31,7 @@ def entropy(message):
     h = 0
     for n_i in message.values():
         p_i = n_i/sum(message.values())
-        if p_i == 0:
-            h += 0
-        else:
-            h += -p_i*(np.log(p_i))
+        h += -p_i*(np.log(p_i))
     return h/np.log(2)
 
 
