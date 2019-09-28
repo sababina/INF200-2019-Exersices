@@ -14,9 +14,10 @@ def char_counts(textfilename):
 
     :return: Returns a list or tuple of counted character code
     """
-    open_file = open(textfilename, encoding='utf-8')
-    content_of_file = open_file.read()
     result = [0]*256
+    
+    with open(textfilename, encoding='utf-8') as open_file:
+        content_of_file = open_file.read()
 
     for char in content_of_file:
         result[ord(char)] += 1
