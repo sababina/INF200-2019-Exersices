@@ -19,8 +19,7 @@ def char_counts(textfilename):
     result = [0]*256
 
     for char in content_of_file:
-        ascii_val = ord(char)
-        result[ascii_val] += 1
+        result[ord(char)] += 1
     return result
 
 
