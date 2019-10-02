@@ -23,3 +23,8 @@ def median(data):
 
 def test_median_of_singleton():
     assert median([4]) == 4
+
+
+def test_median_of_odd_number():
+    data =[1, 3, 5, 7, 9]
+    assert median(data) == statistics.median(data)
