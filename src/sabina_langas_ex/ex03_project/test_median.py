@@ -44,3 +44,9 @@ def test_median_of_reverse_ordred_list():
     data = [5, 4, 3, 2, 1]
     assert median(data) == statistics.median(data)
 
+
+def test_median_of_unsorted_list():
+    data = [2, 6, 3, 9, 13]
+    assert median(data) == statistics.median(data)
+
+
