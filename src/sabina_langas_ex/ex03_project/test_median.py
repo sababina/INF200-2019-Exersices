@@ -38,3 +38,9 @@ def test_median_of_even_numeber():
 def test_median_of_ordred_list():
     data = [1, 2, 3, 4, 5]
     assert median(data) == statistics.median(data)
+
+
+def test_median_of_reverse_ordred_list():
+    data = [5, 4, 3, 2, 1]
+    assert median(data) == statistics.median(data)
+
