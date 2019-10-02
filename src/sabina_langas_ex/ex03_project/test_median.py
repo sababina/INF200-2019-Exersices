@@ -28,3 +28,8 @@ def test_median_of_singleton():
 def test_median_of_odd_number():
     data =[1, 3, 5, 7, 9]
     assert median(data) == statistics.median(data)
+
+
+def test_median_of_even_numeber():
+    data = [2, 4, 6, 8, 10]
+    assert median(data) == statistics.median(data)
