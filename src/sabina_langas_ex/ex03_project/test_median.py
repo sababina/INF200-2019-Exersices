@@ -20,11 +20,11 @@ def median(data):
     if num_elements % 2 == 1:
         return sorted_data[num_elements // 2]
     elif not sorted_data:
-        raise ValueError
+        raise ValueError("Please insert a list that is not empty")
     else:
-        return 0.5 * (
-                sorted_data[num_elements // 2 - 1] + sorted_data[num_elements // 2]
-        )
+        return (
+            sorted_data[num_elements // 2 - 1] + sorted_data[num_elements // 2]
+        )/2
 
 
 def test_median_of_singleton():
@@ -64,7 +64,7 @@ def test_median_raises_value_error_on_empty_list():
 
 def test_original_data_stays_same():
     data = [1, 2, 3]
-    new_data = median(data)
+    median(data)
     assert data == [1, 2, 3]
 
 
