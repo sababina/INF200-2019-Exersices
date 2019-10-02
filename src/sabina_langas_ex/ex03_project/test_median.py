@@ -50,7 +50,15 @@ def test_median_of_unsorted_list():
     assert median(data) == statistics.median(data)
 
 
-def test_median_rasis_value_error_on_empty_list():
+def test_median_raises_value_error_on_empty_list():
     with pytest.raises(ValueError):
         median([])
+    pass
+
+
+def test_original_data_stays_same():
+    data = [1, 2, 3]
+    new_data = median(data)
+    assert data == [1, 2, 3]
+
 
