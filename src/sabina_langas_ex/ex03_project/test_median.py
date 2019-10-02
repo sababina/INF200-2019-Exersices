@@ -62,3 +62,7 @@ def test_original_data_stays_same():
     assert data == [1, 2, 3]
 
 
+def test_median_of_tuple_works():
+    list1 = [1, 2, 3, 4]
+    tuple1 = tuple(list1)
+    assert median(list1) == median(tuple1)
