@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+import statistics
+import pytest
+
 __author__ = 'Sabina Langås'
 __email__ = 'sabinal@nmbu.no'
 
