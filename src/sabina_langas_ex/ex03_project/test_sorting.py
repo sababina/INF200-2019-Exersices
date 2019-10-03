@@ -106,5 +106,3 @@ def test_sorting():
 
     sorted_numbers_float = [0.0000, 0.89898, 0.9999]
     assert bubble_sort(sorted_numbers_float) == sorted(sorted_numbers_float)
-
-
