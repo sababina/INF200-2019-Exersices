@@ -3,11 +3,12 @@
 import statistics
 import pytest
 
-__author__ = 'Sabina Langås'
-__email__ = 'sabinal@nmbu.no'
+__author__ = "Sabina Langås"
+__email__ = "sabinal@nmbu.no"
 
 
-def median(data):
+def median(data):  # The median code is collected from yngvem(github user) :
+    # https://github.com/yngvem/INF200-2019-Exercises.git
     """
     Returns median of data.
 
@@ -24,7 +25,7 @@ def median(data):
     else:
         return (
             sorted_data[num_elements // 2 - 1] + sorted_data[num_elements // 2]
-        )/2
+        ) / 2
 
 
 def test_median_of_singleton():
