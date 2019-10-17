@@ -47,7 +47,7 @@ def test_sorted_is_not_original():
     """
     data = [3, 2, 1]
     sorted_data = bubble_sort(data)
-    assert data != sorted_data
+    assert data is not sorted_data
 
 
 def test_original_unchanged():
@@ -76,14 +76,14 @@ def test_sort_sorted():
 def test_sort_reversed():
     """Test that sorting works on reverse-sorted data."""
     data = [5, 4, 3, 2, 1]
-    sorted_data = sorted(data)
+    sorted_data = [1, 2, 3, 4, 5]
     assert sorted_data == bubble_sort(data)
 
 
 def test_sort_all_equal():
     """Test that sorting handles data with identical elements."""
     data = [2, 5, 3, 2, 7, 5]
-    sorted_data = sorted(data)
+    sorted_data = [2, 2, 3, 5, 5, 7]
     assert sorted_data == bubble_sort(data)
 
 
@@ -96,13 +96,13 @@ def test_sorting():
     numbers of different length or lists of strings.
     """
     sorted_numbers_int = [3, 4, 5, 6, 7]
-    assert bubble_sort(sorted_numbers_int) == sorted(sorted_numbers_int)
+    assert bubble_sort(sorted_numbers_int) == [3, 4, 5, 6, 7]
 
     sorted_string = ['abehehhe']
-    assert bubble_sort(sorted_string) == sorted(sorted_string)
+    assert bubble_sort(sorted_string) == ['abehehhe']
 
-    sorted_string_list = ['aaa', 'bnbb', 'jfjfjff']
-    assert bubble_sort(sorted_string_list) == sorted(sorted_string_list)
+    sorted_string_list = ['aaa', 'bbb', 'jfjfjff']
+    assert bubble_sort(sorted_string_list) == ['aaa', 'bbb', 'jfjfjff']
 
     sorted_numbers_float = [0.0000, 0.89898, 0.9999]
-    assert bubble_sort(sorted_numbers_float) == sorted(sorted_numbers_float)
+    assert bubble_sort(sorted_numbers_float) == [0.0000, 0.89898, 0.9999]
