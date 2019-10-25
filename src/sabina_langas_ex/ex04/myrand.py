@@ -11,7 +11,7 @@ class ListRand:
         self.next = 0
 
     def rand(self):
-        if self.next > len(self.random_number):
+        if self.next >= len(self.random_number):
             raise RuntimeError("The last number has been delivered")
 
         number = self.random_number[self.next]
