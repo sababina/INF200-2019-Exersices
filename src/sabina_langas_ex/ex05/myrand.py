@@ -89,3 +89,13 @@ class BoundedSimulation(Simulation):
             num_steps += 1
 
         return num_steps
+
+
+if __name__ == '__main__':
+
+    list_of_left_boundaries = [0, -10, -100, -1000, -10000]
+
+    for boundary_left in list_of_left_boundaries:
+        steps = BoundedSimulation(0, 20, seed=1234, left_limit=boundary_left,
+                                  right_limit=20).run_simulation(20)
+        print(f'Left boundary: {boundary_left:5d}: {sorted(steps)}')
