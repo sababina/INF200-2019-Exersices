@@ -62,3 +62,19 @@ class LCGRand:
         """
         while True:
             yield self.rand()
+
+class RandIter:
+    def __init__(self, random_number_generator, length):
+        """
+
+        Arguments
+        ---------
+        random_number_generator :
+            A random number generator with a ``rand`` method that
+            takes no arguments and returns a random number.
+        length : int
+            The number of random numbers to generate
+        """
+        self.generator = random_number_generator
+        self.length = length
+        self.num_generated_numbers = None
