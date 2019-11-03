@@ -5,6 +5,11 @@ __email__ = 'sabinal@nmbu.no'
 
 
 class LCGRand:
+
+    """
+    A random number generator
+    """
+
     a = 7 ** 5
     m = 2 ** 31 - 1
 
