@@ -48,6 +48,11 @@ class Walker:
 
 
 class Simulation:
+    """
+    Runs simulations of one or more random walks.
+    In the simulations, there is a walker that starts at a given position and
+    has a home. The walk simulated is the walkers way home.
+    """
 
     def __init__(self, start, home, seed):
         """
