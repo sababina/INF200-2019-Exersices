@@ -36,17 +36,19 @@ class LCGRand:
 
     def random_sequence(self, length):
         """
-        Generates a random_sequence, with given length
+        Generates a random sequence, with given length of many numbers it
+        should be
 
         Arguments
         ---------
         length : int
-            The wished length of random_sequence
+            The number of random numbers that should be generated in the
+            sequence
 
         Returns
         -------
         int
-            A random sequence
+            A random sequence of numbers
         """
 
         return RandIter(self, length)
@@ -78,3 +80,4 @@ class RandIter:
         self.generator = random_number_generator
         self.length = length
         self.num_generated_numbers = None
+
