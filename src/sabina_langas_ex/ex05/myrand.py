@@ -47,7 +47,7 @@ class BoundedSimulation(Simulation):
     Simulates one or more bounded walks. The walker of the walk  can not move
     out of the limits that's set.
     """
-    
+
     def __init__(self, start, home, seed, left_limit, right_limit):
         """
         Initialise the simulation
@@ -71,6 +71,13 @@ class BoundedSimulation(Simulation):
         self.right_limit = right_limit
 
     def single_walk(self):
+
+        """
+        Simulates on single bounded walk
+
+        :return:
+            Number of steps taken
+        """
 
         walker = BoundedWalker(self.start, self.home,
                                self.left_limit, self.right_limit)
