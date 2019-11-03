@@ -45,3 +45,24 @@ class Walker:
         Returns how many steps the walker has taken
         """
         return self.steps
+
+
+class Simulation:
+
+    def __init__(self, start, home, seed):
+        """
+        Initialise the simulation
+
+        Arguments
+        ---------
+        start : int
+            The walker's initial position
+        home : int
+            The walk ends when the walker reaches home
+        seed : int
+            Random generator seed
+        """
+
+        self.start = start
+        self.home = home
+        self.seed = random.seed(seed)
