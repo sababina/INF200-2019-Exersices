@@ -66,3 +66,37 @@ class Simulation:
         self.start = start
         self.home = home
         self.seed = random.seed(seed)
+
+    def single_walk(self):
+        """
+        Simulate single walk from start to home, returning number of steps.
+
+        Returns
+        -------
+        int
+            The number of steps taken
+        """
+
+        walk = Walker(self.start, self.home)
+
+        while not walk.is_at_home():
+            walk.move()
+
+        return walk.steps
+
+    def run_simulation(self, num_walks):
+        """
+        Run a set of walks, returns list of number of steps taken.
+
+        Arguments
+        ---------
+        num_walks : int
+            The number of walks to simulate
+
+        Returns
+        -------
+        list[int]
+            List with the number of steps per walk
+        """
+
+        return [self.single_walk() for _ in range(num_walks)]
