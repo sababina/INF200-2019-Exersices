@@ -7,6 +7,10 @@ __email__ = 'sabinal@nmbu.no'
 
 
 class BoundedWalker(Walker):
+    """
+    Simulates a bounded walk. The walker can not move out of the limits
+    that's set.
+    """
 
     def __init__(self, start, home, left_limit, right_limit):
         """
