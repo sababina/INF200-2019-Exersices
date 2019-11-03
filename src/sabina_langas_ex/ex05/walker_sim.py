@@ -104,11 +104,13 @@ class Simulation:
 
 if __name__ == '__main__':
 
-    print('List 1 -> 3 with 20 walks from start = 0 to home = 10')
+    print('List 1 to 3 with 20 walks from start at 0 position to home at 10 '
+          'position')
     print(f'List 1:{sorted(Simulation(0, 10, 54321).run_simulation(20))}')
     print(f'List 2:{sorted(Simulation(0, 10, 12345).run_simulation(20))}')
     print(f'List 3:{sorted(Simulation(0, 10, 12345).run_simulation(20))}')
-    print('List 4 -> 6 with 20 walks from start = 10 to home = 0')
+    print('List 4 to 6 with 20 walks from start at 10 position to home at 0 '
+          'position')
     print(f'List 4:{sorted(Simulation(10, 0, 54321).run_simulation(20))}')
     print(f'List 5:{sorted(Simulation(10, 0, 12345).run_simulation(20))}')
     print(f'List 6:{sorted(Simulation(10, 0, 12345).run_simulation(20))}')
