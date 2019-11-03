@@ -40,3 +40,41 @@ class BoundedWalker(Walker):
             self.x = self.left_limit
         elif self.x > self.right_limit:
             self.x = self.right_limit
+
+
+class BoundedSimulation(Simulation):
+
+    def __init__(self, start, home, seed, left_limit, right_limit):
+        """
+        Initialise the simulation
+
+        Arguments
+        ---------
+        start : int
+            The walker's initial position
+        home : int
+            The walk ends when the walker reaches home
+        seed : int
+            Random generator seed
+        left_limit : int
+            The left boundary of walker movement
+        right_limit : int
+            The right boundary  of walker movement
+        """
+
+        super().__init__(start, home, seed)
+        self.left_limit = left_limit
+        self.right_limit = right_limit
+
+    def single_walk(self):
+
+        walker = BoundedWalker(self.start, self.home,
+                               self.left_limit, self.right_limit)
+
+        num_steps = 0
+
+        while not walker.is_at_home():
+            walker.move()
+            num_steps += 1
+
+        return num_steps
