@@ -8,8 +8,8 @@ __email__ = 'sabinal@nmbu.no'
 
 class BoundedWalker(Walker):
     """
-    Simulates a bounded walk. The walker can not move out of the limits
-    that's set.
+    Simulates a bounded walk. The walker of the walk can not move out of the
+    limits that's set.
     """
 
     def __init__(self, start, home, left_limit, right_limit):
@@ -43,7 +43,11 @@ class BoundedWalker(Walker):
 
 
 class BoundedSimulation(Simulation):
-
+    """
+    Simulates one or more bounded walks. The walker of the walk  can not move
+    out of the limits that's set.
+    """
+    
     def __init__(self, start, home, seed, left_limit, right_limit):
         """
         Initialise the simulation
