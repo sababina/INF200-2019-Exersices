@@ -100,3 +100,15 @@ class Simulation:
         """
 
         return [self.single_walk() for _ in range(num_walks)]
+
+
+if __name__ == '__main__':
+
+    print('List 1 -> 3 with 20 walks from start = 0 to home = 10')
+    print(f'List 1:{sorted(Simulation(0, 10, 54321).run_simulation(20))}')
+    print(f'List 2:{sorted(Simulation(0, 10, 12345).run_simulation(20))}')
+    print(f'List 3:{sorted(Simulation(0, 10, 12345).run_simulation(20))}')
+    print('List 4 -> 6 with 20 walks from start = 10 to home = 0')
+    print(f'List 4:{sorted(Simulation(10, 0, 54321).run_simulation(20))}')
+    print(f'List 5:{sorted(Simulation(10, 0, 12345).run_simulation(20))}')
+    print(f'List 6:{sorted(Simulation(10, 0, 12345).run_simulation(20))}')
