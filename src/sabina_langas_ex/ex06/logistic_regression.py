@@ -81,10 +81,8 @@ def logistic_gradient(coef, X, y):
         The gradient of the cross entropy loss related to the linear
         logistic regression model.
     """
-
-    gradient = (np.dot(X.T, (predict_proba(coef, X)-y)))
-
-    return gradient
+    proba = predict_proba(coef, X)
+    return X.T @ (y - proba)
 
 
 class LogisticRegression(BaseEstimator, ClassifierMixin):
@@ -283,10 +281,9 @@ if __name__ == "__main__":
     coef = np.random.standard_normal(5)
     y = predict_proba(coef, X) > 0.5
 
-    lr_model = LogisticRegression()
+    lr_model = LogisticRegression(max_iter=1000)
     lr_model.fit(X, y)
 
-    # Print performance information
     print(f"Accuracy: {lr_model.score(X, y)}")
     print(f"True coefficients: {coef}")
     print(f"Learned coefficients: {lr_model.coef_}")
