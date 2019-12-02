@@ -283,6 +283,8 @@ if __name__ == "__main__":
     # Fit a logistic regression model to the X and y vector
     # Fill in your code here.
     # Create a logistic regression object and fit it to the dataset
+    lr_model = LogisticRegression()
+    lr_model.fit(X, y)
 
     # Print performance information
     print(f"Accuracy: {lr_model.score(X, y)}")
