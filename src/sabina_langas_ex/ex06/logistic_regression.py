@@ -80,8 +80,8 @@ def logistic_gradient(coef, X, y):
         The gradient of the cross entropy loss related to the linear
         logistic regression model.
     """
-    # Your code here
-    pass
+    proba = predict_proba(coef, X)
+    return X.T @ (y - proba)
 
 
 class LogisticRegression(BaseEstimator, ClassifierMixin):
