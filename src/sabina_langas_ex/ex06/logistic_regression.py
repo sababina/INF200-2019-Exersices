@@ -51,6 +51,7 @@ def predict_proba(coef, X):
         The predicted class probabilities.
     """
     p = sigmoid(X @ coef)
+
     return p
 
 
@@ -58,11 +59,11 @@ def logistic_gradient(coef, X, y):
     r"""Returns the gradient of a logistic regression model.
     The gradient is given by
     .. math::
-        \nabla_w L(\mathbf{w}; X, \mathbf{y}) = \sum_i \mathbf{x}_i (y_i - \hat{y}_i),
-    or, elementwise,
+        \nabla_w L(\mathbf{w}; X, \mathbf{y}) = \sum_i \mathbf{x}_i (y_i -
+        \hat{y}_i), or, elementwise,
     .. math::
-        \left[\nabla_w L(\mathbf{w}; X, \mathbf{y})\right]_j = \frac{\partial L}{\partial w_j}
-                                                             = \sum_i X_{ij} (y_i - \hat{y}_i),
+        \left[\nabla_w L(\mathbf{w}; X, \mathbf{y})\right]_j = \frac{\partial
+        L}{\partial w_j}= \sum_i X_{ij} (y_i - \hat{y}_i),
     where :math:`\hat{y}_i` is the predicted value for data point
     :math:`i` and is given by :math:`\sigma(x_i^Tw)`, where
     :math:`\sigma(z)` is the sigmoidal function.
@@ -81,6 +82,7 @@ def logistic_gradient(coef, X, y):
         logistic regression model.
     """
     proba = predict_proba(coef, X)
+
     return X.T @ (y - proba)
 
 
@@ -132,7 +134,8 @@ class LogisticRegression(BaseEstimator, ClassifierMixin):
         learning_rate : float (default=0.01)
             The step-size for the gradient descent updates.
         random_state : np.random.random_state or int or None (default=None)
-            A numpy random state object or a seed for a numpy random state object.
+            A numpy random state object or a seed for a numpy random state
+            object.
         """
         self.max_iter = max_iter
         self.tol = tol
@@ -169,7 +172,8 @@ class LogisticRegression(BaseEstimator, ClassifierMixin):
         Gradient descent works by iteratively applying the following update
         rule
         .. math::
-            \mathbf{w}^{(k)} \gets \mathbf{w}^{(k-1)} - \eta \nabla L(\mathbf{w}^{(k-1)}; X, \mathbf{y}),
+            \mathbf{w}^{(k)} \gets \mathbf{w}^{(k-1)} - \eta \nabla
+            L(\mathbf{w}^{(k-1)}; X, \mathbf{y}),
         where :math:`\mathbf{w}^{(k)}` is the coefficient vector at iteration
         ``k``, :math:`\mathbf{w}^{(k-1)}` is the coefficient vector at
         iteration k-1, :math:`\eta` is the learning rate and
@@ -223,6 +227,7 @@ class LogisticRegression(BaseEstimator, ClassifierMixin):
         coef = random_state.standard_normal(X.shape[1])
 
         self.coef_ = self._fit_gradient_descent(coef, X, y)
+
         return self
 
     def predict_proba(self, X):
@@ -241,6 +246,7 @@ class LogisticRegression(BaseEstimator, ClassifierMixin):
         """
         if not hasattr(self, "coef_"):
             raise NotFittedError("Call fit before prediction")
+
         return predict_proba(self.coef_, X)
 
     def predict_log_proba(self, X):
